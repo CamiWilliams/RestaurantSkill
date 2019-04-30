@@ -1,0 +1,29 @@
+{
+              "restaurantData": {
+                "properties": {
+                  "title": "SPECIALS",
+                  "items": [
+					  {
+					    "dish": "Filet Mignon",
+					    "description": "Our signature filet mignon steak, served with mashed potatoes and asparagus.",
+					    "vid": "https://s3.amazonaws.com/apl-community-code/restaurant/steak.mp4"
+					  },
+					  {
+					    "dish": "Pasta Burrata",
+					    "description": "Fresh pasta with vine-ripened tomatoes, garlic, basil, and mozzarella.",
+					    "vid": "https://s3.amazonaws.com/apl-community-code/restaurant/pasta.mp4"
+					  },
+					  {
+					    "dish": "Vegetarian Paella",
+					    "description": "Valencian rice dish with artichoke hearts, green beans, peas and saffron.",
+					    "vid": "https://s3.amazonaws.com/apl-community-code/restaurant/paella.mp4"
+					  },
+					  {
+					    "dish": "Lobster Tails",
+					    "description": "Rich meaty lobster tails with a peanut garlic sauce and butter.",
+					    "vid": "https://s3.amazonaws.com/apl-community-code/restaurant/lobster.mp4"
+					  }
+					]
+                }
+              }
+}

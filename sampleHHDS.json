@@ -1,0 +1,30 @@
+{
+              "restaurantData": {
+                "properties": {
+                  "title": "HAPPY HOUR",
+                  "items": [
+					  {
+					    "dish": "Wine",
+					    "description": "Half pour glass of wine for $4.00, full pour glass for $6.00.",
+					    "vid": "https://s3.amazonaws.com/apl-community-code/restaurant/wine.mp4"
+					  },
+					  {
+					    "dish": "Beers",
+					    "description": "Beers on tap for half off.",
+					    "vid": "https://s3.amazonaws.com/apl-community-code/restaurant/beer.mp4"
+					  },
+					  {
+					    "dish": "Appetizers",
+					    "description": "All appetizer menu items for $5.00",
+					    "vid": "https://s3.amazonaws.com/apl-community-code/restaurant/fries.mp4"
+					  },
+					  {
+					    "dish": "Desserts",
+					    "description": "All dessert menu items for $5.00",
+					    "vid": "https://s3.amazonaws.com/apl-community-code/restaurant/cake.mp4"
+					  }
+					]
+                }
+              }
+}
+

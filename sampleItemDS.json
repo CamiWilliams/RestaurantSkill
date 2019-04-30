@@ -1,0 +1,13 @@
+{
+              "restaurantData": {
+                "properties": {
+                  "title": "SPECIALS",
+                  "item": 
+        					  {
+        					    "dish": "Pasta Burrata",
+        					    "description": "Fresh pasta with vine-ripened tomatoes, garlic, basil, and mozzarella.",
+        					    "vid": "https://s3.amazonaws.com/apl-community-code/restaurant/pasta.mp4"
+        					  }
+                }
+              }
+}

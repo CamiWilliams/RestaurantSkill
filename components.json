@@ -1,0 +1,223 @@
+{
+    "type": "APL",
+    "version": "1.0",
+    "theme": "dark",
+    "import": [],
+    "resources": [
+        {
+            "description": "Colors",
+            "colors": {
+                "myBlue": "#5ADDE4",
+                "myOrange": "#EF9260",
+                "myBlack": "#283540"
+            }
+        },
+        {
+            "description": "Images",
+            "strings": {
+                "table": "https://s3.amazonaws.com/apl-community-code/restaurant/table.png"
+            }
+        }
+    ],
+    "styles": {},
+    "layouts": {
+        "Logo": {
+            "parameters": [],
+            "items": [
+                {
+                    "when": "${viewport.shape != 'round'}",
+                    "type": "Container",
+                    "width": "100vw",
+                    "height": "15vh",
+                    "direction": "row",
+                    "alignItems": "center",
+                    "justifyContent": "center",
+                    "items": [
+                        {
+                             "type": "Text",
+                            "text": "<i>The </i>",
+                            "fontWeight": "800",
+                            "fontSize": "7vh",
+                            "paddingTop": "2vh"
+                        },
+                        {
+                             "type": "Text",
+                            "text": "Alexa",
+                            "fontWeight": "800",
+                            "fontSize": "10vh"
+                        },
+                        {
+                            "type": "Text",
+                            "text": "<i> Cafe</i>",
+                            "fontWeight": "900",
+                            "fontSize": "7vh",
+                            "paddingTop": "2vh"
+                        }
+                    ]
+                },
+                {
+                    "when": "${viewport.shape == 'round'}",
+                    "type": "Container",
+                    "width": "100vw",
+                    "height": "15vh",
+                    "direction": "row",
+                    "alignItems": "center",
+                    "justifyContent": "center",
+                    "paddingTop": "7vh",
+                    "paddingBottom": "5vh",
+                    "items": [
+                        {
+                            "type": "Text",
+                            "text": "<i>The </i>",
+                            "fontWeight": "800",
+                            "fontSize": "7vh",
+                            "paddingTop": "2vh"
+                        },
+                        {
+                            "type": "Text",
+                            "text": "Alexa",
+                            "fontWeight": "800",
+                            "fontSize": "10vh"
+                        },
+                        {
+                            "type": "Text",
+                            "text": "<i> Cafe</i>",
+                            "fontWeight": "900",
+                            "fontSize": "7vh",
+                            "paddingTop": "2vh"
+                        }
+                    ]
+                }
+            ]
+        },
+        "ListItem": {
+            "parameters": [
+                "title",
+                "subtitle"
+            ],
+            "items": [
+                {
+                    "when": "${viewport.shape != 'round'}",
+                    "type": "Container",
+                    "width": "65vw",
+                    "height": "22vh",
+                    "items": [
+                        {
+                            "type": "Frame",
+                            "width": "65vw",
+                            "height": "20vh",
+                            "backgroundColor": "white",
+                            "borderRadius": "2vw",
+                            "item": {
+                                "type": "Container",
+                                "width": "65vw",
+                                "height": "20vh",
+                                "direction": "row",
+                                "alignItems": "center",
+                                "items": [
+                                    {
+                                        "type": "Container",
+                                        "width": "45vw",
+                                        "height": "20vh",
+                                        "paddingLeft": "3vw",
+                                        "justifyContent": "center",
+                                        "items": [
+                                            {
+                                                "type": "Text",
+                                                "text": "${title}",
+                                                "color": "@myBlack",
+                                                "fontSize": "6vh",
+                                                "fontWeight": "300"
+                                            },
+                                            {
+                                                "type": "Text",
+                                                "text": "${subtitle}",
+                                                "color": "@myBlack",
+                                                "fontSize": "2.5vh",
+                                                "fontWeight": "300"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "TouchWrapper",
+                                        "width": "15vw",
+                                        "height": "10vh",
+                                        "item": {
+                                            "type": "Frame",
+                                            "width": "15vw",
+                                            "height": "10vh",
+                                            "borderWidth": "0.75vh",
+                                            "borderColor": "@myOrange",
+                                            "borderRadius": "30vw",
+                                            "item": {
+                                                "type": "Text",
+                                                "text": "Tell me more!",
+                                                "color": "@myOrange",
+                                                "width": "15vw",
+                                                "height": "10vh",
+                                                "textAlign": "center",
+                                                "textAlignVertical": "center",
+                                                "fontSize": "3vh"
+                                            }
+                                        },
+                                        "onPress": {
+                                            "type": "SendEvent",
+                                            "arguments": [
+                                                "${title}"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "when": "${viewport.shape == 'round'}",
+                    "type": "TouchWrapper",
+                    "width": "65vw",
+                    "height": "22vh",
+                    "items": [
+                        {
+                            "type": "Frame",
+                            "width": "65vw",
+                            "height": "20vh",
+                            "backgroundColor": "white",
+                            "borderRadius": "2vw",
+                            "item": {
+                                "type": "Container",
+                                "width": "65vw",
+                                "height": "20vh",
+                                "justifyContent": "center",
+                                "items": [
+                                    {
+                                        "type": "Text",
+                                        "text": "${title}",
+                                        "color": "@myBlack",
+                                        "fontSize": "6vh",
+                                        "fontWeight": "300",
+                                        "paddingLeft": "5vw"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "text": "${subtitle}",
+                                        "color": "@myBlack",
+                                        "fontSize": "2.5vh",
+                                        "fontWeight": "300",
+                                        "paddingLeft": "5vw"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "onPress": {
+                        "type": "SendEvent",
+                        "arguments": [
+                            "${title}"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

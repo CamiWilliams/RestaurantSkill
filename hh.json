@@ -1,0 +1,69 @@
+{
+    "type": "APL",
+    "version": "1.0",
+    "theme": "dark",
+    "import": [
+        {
+          "name": "alexa-layouts",
+          "version": "1.0.0"
+        },
+        {
+            "name": "restaurant-components",
+            "source": "https://s3.amazonaws.com/apl-community-code/restaurant/components.json"
+        }
+    ],
+    "resources": [],
+    "styles": {},
+    "layouts": {},
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "width": "100vw",
+                "height": "100vh",
+                "alignItems": "center",
+                "items": [
+                    {
+                        "type": "Frame",
+                        "width": "100vw",
+                        "height": "100vw",
+                        "backgroundColor": "@myBlue",
+                        "position": "absolute"
+                    },
+                    {
+                        "type": "Logo"
+                    },
+                    {
+                        "type": "Frame",
+                        "backgroundColor": "@myOrange",
+                        "width": "80vw",
+                        "height": "90vh",
+                        "item": {
+                            "type": "ScrollView",
+                            "width": "80vw",
+                            "height": "90vh",
+                            "item": {
+                                "type": "Container",
+                                "width": "80vw",
+                                "paddingTop": "5vh",
+                                "paddingBottom": "5vh",
+                                "alignItems": "center",
+                                "data": "${payload.restaurantData.properties.items}",
+                                "items": [
+                                    {
+                                        "type": "ListItem",
+                                        "title": "${data.dish}",
+                                        "subtitle": "${data.description}"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

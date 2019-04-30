@@ -1,0 +1,93 @@
+{
+    "type": "APL",
+    "version": "1.0",
+    "theme": "dark",
+    "import": [],
+    "resources": [
+        {
+            "description": "Colors",
+            "colors": {
+                "myBlue": "#5ADDE4",
+                "myOrange": "#EF9260"
+            }
+        },
+        {
+            "description": "Images",
+            "strings": {
+                "table": "https://s3.amazonaws.com/apl-community-code/restaurant/table.png"
+            }
+        }
+    ],
+    "styles": {},
+    "layouts": {},
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "width": "100vw",
+                "height": "100vh",
+                "items": [
+                    {
+                        "type": "Frame",
+                        "width": "100vw",
+                        "height": "55vh",
+                        "backgroundColor": "@myBlue"
+                    },
+                    {
+                        "type": "Frame",
+                        "width": "100vw",
+                        "height": "45vh",
+                        "backgroundColor": "@myOrange"
+                    },
+                    {
+                        "type": "Container",
+                        "width": "100vw",
+                        "height": "100vh",
+                        "position": "absolute",
+                        "items": [
+                            {
+                                "type": "Image",
+                                "source": "@table",
+                                "scale": "best-fill",
+                                "width": "100vw",
+                                "height": "100vh",
+                                "position": "absolute",
+                                "top": "8vh"
+                            },
+                            {
+                                "type": "Text",
+                                "text": "<i>The</i>",
+                                "fontWeight": "800",
+                                "fontSize": "10vh",
+                                "position": "absolute",
+                                "top": "5vh",
+                                "left": "25vw"
+                            },
+                            {
+                                "type": "Text",
+                                "text": "Alexa",
+                                "fontWeight": "800",
+                                "fontSize": "15vh",
+                                "position": "absolute",
+                                "top": "12vh",
+                                "left": "34vw"
+                            },
+                            {
+                                "type": "Text",
+                                "text": "<i>Cafe</i>",
+                                "fontWeight": "900",
+                                "fontSize": "10vh",
+                                "position": "absolute",
+                                "top": "25vh",
+                                "left": "55vw"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

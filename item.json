@@ -1,0 +1,106 @@
+{
+    "type": "APL",
+    "version": "1.0",
+    "theme": "dark",
+    "import": [
+        {
+          "name": "alexa-layouts",
+          "version": "1.0.0"
+        },
+        {
+            "name": "restaurant-components",
+            "source": "https://s3.amazonaws.com/apl-community-code/restaurant/components.json"
+        }
+    ],
+    "resources": [],
+    "styles": {},
+    "layouts": {},
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "width": "100vw",
+                "height": "100vh",
+                "alignItems": "center",
+                "items": [
+                    {
+                        "type": "Frame",
+                        "width": "100vw",
+                        "height": "100vw",
+                        "backgroundColor": "@myBlue",
+                        "position": "absolute"
+                    },
+                    {
+                        "type": "Logo"
+                    },
+                    {
+                        "type": "Frame",
+                        "backgroundColor": "@myOrange",
+                        "width": "80vw",
+                        "height": "90vh",
+                        "item": {
+                            "type": "Container",
+                            "width": "80vw",
+                            "height": "90vh",
+                            "alignItems": "center",
+                            "items": [
+                                {
+                                    "type": "Video",
+                                    "id": "myVideoPlayer",
+                                    "paddingTop": "4vh",
+                                    "height": "60vh",
+                                    "width": "100vw",
+                                    "source": "${payload.restaurantData.properties.item.vid}",
+                                     "onPause":[
+                                         {
+                                            "type": "SetState",
+                                            "mediaComponentId": "alexaPlayPauseToggleButton",
+                                            "state": "checked",
+                                            "value": true
+                                       }
+                                         ],
+                                     "onPlay":[
+                                         {
+                                            "type": "SetState",
+                                            "mediaComponentId": "alexaPlayPauseToggleButton",
+                                            "state": "checked",
+                                            "value": false
+                                       }
+                                    ]
+                                },
+                                {
+                                    "type": "AlexaTransportControls",
+                                    "mediaComponentId": "myVideoPlayer",
+                                    "primaryControlSize": "4vw",
+                                    "secondaryControlSize": "4vw",
+                                    "autoplay": "true",
+                                    "position": "absolute",
+                                    "top": "45vh"
+                                },
+                                {
+                                    "when": "${viewport.shape != 'round'}",
+                                    "type": "Text",
+                                    "text": "${payload.restaurantData.properties.item.dish}",
+                                    "fontWeight": "900",
+                                    "fontSize": "7vh",
+                                    "paddingTop": "2vh"
+                                },
+                                {
+                                    "type": "Text",
+                                    "text": "${payload.restaurantData.properties.item.description}",
+                                    "fontWeight": "400",
+                                    "fontSize": "4vh",
+                                    "paddingTop": "2vh",
+                                    "width": "50vw"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
